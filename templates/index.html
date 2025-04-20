@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card shadow mt-5">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title text-center">
+                    <i class="bi bi-file-earmark-pdf"></i> PDF Watermark Tool
+                </h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <div class="mb-4 text-center">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="pdf_files" id="pdf_files" class="file-upload-input" 
+                                   accept=".pdf" multiple required>
+                            <label for="pdf_files" class="file-upload-label">
+                                <div class="file-upload-design">
+                                    <i class="bi bi-cloud-arrow-up fs-1"></i>
+                                    <p class="mt-3">Drag & drop your PDF files here or click to browse</p>
+                                    <small class="text-muted">Supports multiple PDF files</small>
+                                </div>
+                            </label>
+                        </div>
+                        <div id="file-list" class="mt-3"></div>
+                    </div>
+
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" id="compress" name="compress">
+                        <label class="form-check-label" for="compress">Compress PDF(s)</label>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-magic"></i> Add Watermark & Download
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted text-center">
+                <small>Watermark will be added to each page with a link to https://krispnotes.in/</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-info-circle"></i> How it works</h5>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">Upload one or more PDF files</li>
+                    <li class="list-group-item">Optionally enable compression to reduce file size</li>
+                    <li class="list-group-item">Click the button to process your files</li>
+                    <li class="list-group-item">Download the watermarked files (single PDF or ZIP for multiple)</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

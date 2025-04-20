@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+*.env
+
+# Flask instance and upload directories
+instance/
+uploads/
+processed/
+
+# Database files
+*.sqlite
+*.db
+
+# VS Code settings
+.vscode/
+
+# MacOS & Linux junk
+.DS_Store
+
+# Temporary files
+*.log
+*.bak
+*.tmp
+*.swp
+*.zip
